@@ -1,16 +1,20 @@
 
 # Day 02 – Dynamic Message Generator
 
-A simple JavaScript project that displays a greeting message based on user input.
+A small JavaScript project that displays a greeting based on user input and handles empty input validation.
 
-## Concepts
-- DOM manipulation
-- Event listeners
-- Functions & parameters
-- Reading input values
+# Concepts Used
 
-## How it works
-User enters a name → clicks button → message updates dynamically.
+DOM manipulation
+Event handling
+Functions
+Conditional logic
+User input validation
+
+# Functionality
+
+Shows a personalized greeting on button click
+Displays a warning message when input is empty
 
 ✅ Status: Completed
 
