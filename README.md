@@ -1,6 +1,16 @@
-# javascript-concept-practice
 
-This repository contains daily JavaScript practice tasks.
-Each folder focuses on a single concept with a small hands-on example.
+# JavaScript Concept Practice 🚀
+
+This repository contains my JavaScript learning journey, including concept-based exercises and small mini projects.
+
+Each folder focuses on a specific concept or practical implementation to strengthen my frontend development skills.
+
+## Topics Covered
+- DOM Manipulation
+- Scope & Functions
+- Array & Index Logic
+- Game Logic using JavaScript
+
+More projects and concepts will be added regularly.
 
 
