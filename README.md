@@ -5,12 +5,6 @@ This repository contains my JavaScript learning journey, including concept-based
 
 Each folder focuses on a specific concept or practical implementation to strengthen my frontend development skills.
 
-## Topics Covered
-- DOM Manipulation
-- Scope & Functions
-- Array & Index Logic
-- Game Logic using JavaScript
-
 More projects and concepts will be added regularly.
 
 
