@@ -4,34 +4,45 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heads or Tails</title>
+
+<title>Heads or Tails Game</title>
+
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-  <div class="container">
-      
-    <h3>Heads or Tails</h3>
+<div class="container">
 
-    <div class="coin">🪙</div>
+<h2>Heads or Tails</h2>
 
-    <button onclick="play('Heads')">
-    Heads
-    </button>
+<div class="coin" id="coin">
+  <div class="coin-face heads"></div>
+  <div class="coin-face tails"></div>
+</div>
 
-    <button onclick="play('Tails')">
-    Tails
-    </button>
+<div class="buttons">
 
-    <p id="result"></p>
+<button onclick="play('Heads')" class="btn-heads">
+Heads
+</button>
 
-  </div>
+<button onclick="play('Tails')" class="btn-tails">
+Tails
+</button>
 
-  <script src="script.js">
+</div>
 
-  </script>
+<button onclick="reset()" class="btn-reset">
+Reset Score
+</button>
+
+<p id="result"></p>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

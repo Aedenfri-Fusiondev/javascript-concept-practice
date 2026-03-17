@@ -1,4 +1,5 @@
 
+const coin = document.getElementById('coin')
   function compMove(){
 
       const random = Math.random();
@@ -11,6 +12,8 @@
       }
   }
 
+   
+
   function play(guess){
 
      const score = JSON.parse(localStorage.getItem('score')) ||{
@@ -20,26 +23,43 @@
 
 
      let computer = compMove();
+
+       coin.classList.remove("flip-heads","flip-tails");
+
+       setTimeout(()=>{
+        if(computer==='Heads'){
+          coin.classList.add("flip-heads")
+        }
+        else{
+          coin.classList.add("flip-tails")
+        }
+       },100);
+
       let result ='';
-      console.log(computer);
+
 
     if(guess===computer){
-      result = 'Win 🥳'
+      result = 'You Win 🥳'
     }
     else{
-      result = 'Lose 🤪'
+      result = 'You Lose 🤪'
     }
  
-    if(result==='Win 🥳'){
+    if(result==='You Win 🥳'){
       score.wins += 1;
     }
     else{
       score.losses +=1;
     }
 
-    localStorage.setItem('score',JSON.stringify(score));
-    
-  alert(`Computer chose: ${computer} , Your chose :${guess}\n${result} \n Wins: ${score.wins} , Losses: ${score.losses}`);
 
+    localStorage.setItem('score',JSON.stringify(score));
+
+  document.getElementById("result").innerText=(`Computer chose: ${computer} , Your choice :${guess}\n${result}\nWins: ${score.wins} , Losses: ${score.losses}`);
 
   }
+
+ function reset(){
+    localStorage.removeItem('score');
+    document.getElementById("result").innerText = "Score reset successfully";
+    }
