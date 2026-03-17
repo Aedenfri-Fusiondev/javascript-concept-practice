@@ -1,17 +1,21 @@
 # Heads or Tails Game
 
-This is a simple JavaScript logic game I created to practice programming concepts.
+A small JavaScript project built to practice programming logic and browser features.
 
-Concept used:
-- Math.random() for computer move
-- Conditional statements
-- LocalStorage to store score
+## Concepts Used
+- Math.random() for generating random results
+- Conditional statements (if/else)
+- LocalStorage to store wins and losses
+- DOM manipulation to update UI dynamically
+- setTimeout() for coin flip timing
 
-Game Logic:
-The computer randomly chooses Heads or Tails.
-If the player guess matches the computer choice → Win
-Otherwise → Lose.
+## Features
+- Random coin toss simulation
+- Score tracking using LocalStorage
+- Reset score functionality
+- Improved UI with coin images
 
-The result and score are displayed using alert().
+## What I Learned
+This project helped me understand randomness, conditional logic, DOM manipulation, and data persistence in the browser.
 
-This project helped me understand how randomness and conditions work in JavaScript.
+I built this project while learning JavaScript and focused on understanding the code step by step.
