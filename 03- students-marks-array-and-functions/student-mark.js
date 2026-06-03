@@ -1,14 +1,13 @@
-// Concept: arrays, loops, functions, template literals.
-// Build: filter students by marks, calculate average, compare each students. 
-
 const students = [
     {name: "Arun" ,marks:75},
-    {name: "Priya" ,marks:42},
-    {name: "Karthik" ,marks:58},
-    {name: "Divya" ,marks:95}
+    {name: "Priya" ,marks:48},
+    {name: "Karthik" ,marks:82},
+    {name: "Divya" ,marks:55}
 ]
 function filter(){
+
     let result = []
+
     for(let i=0 ; i<students.length ; i++){
         
     if(students[i].marks > 60){
@@ -18,8 +17,6 @@ function filter(){
     return result
 }
 function average(){
-    let finalResult =[]
-    
     let total = 0
     for(let i=0 ; i<students.length ; i++){
     total = total + students[i].marks
@@ -29,15 +26,43 @@ function average(){
 }
 function knowAvg(){
     let status =[]
+
 for(let i=0 ; i<students.length ; i++){
     if(students[i].marks > average()){
-        status.push(`${students[i].name} Above Average`)
+        status.push(` Above Average`)
     }
     else if(students[i].marks < average()){
-        status.push(`${students[i].name} Below Average`)
+        status.push(` Below Average`)
     }
 }
     return status
 }
-console.log(average())
-console.log(knowAvg()) 
+function sorting(){
+    return students.sort((a,b) => b.marks - a.marks)
+   
+}
+function getReport(){
+    let fullReport =[]
+    let sorted = sorting();
+    let avg =average()
+
+    for(let i=0 ; i<sorted.length ; i++){
+        let status 
+
+        if(sorted[i].marks > avg){
+        status = ` Above Average`
+        }
+        else if(sorted[i].marks < avg){
+        status = ` Below Average`
+        }
+
+            
+     fullReport.push({
+           name : sorted[i].name,
+           marks : sorted[i].marks,
+           status : status
+     })
+}
+    return fullReport
+}
+console.log(getReport())
