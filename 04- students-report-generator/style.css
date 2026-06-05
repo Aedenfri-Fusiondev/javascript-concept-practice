@@ -1,0 +1,33 @@
+#btn{
+    width: 140px;
+    background-color: #0da10d;
+    color: white;
+    font-family: Playground;
+    font-size: 15px;
+    border: 2px solid #044104; 
+    border-radius: 5px;
+    padding: 5px;
+    margin-left:180px;
+    margin-top: 10px;
+}
+#container{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    display: grid;
+    place-items: center;
+    
+  
+}
+.box{
+     width:500px;
+     background: linear-gradient(90deg, #6bd18faa 0%, #e37011ed 100%);
+     height:300px;
+     border-radius: 60px;
+     margin:100px auto;
+}
+h1{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left:140px;
+    padding-top: 20px;
+}
