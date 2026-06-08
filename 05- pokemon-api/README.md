@@ -43,5 +43,5 @@ The lesson: understanding the concept deeply
 is faster than debugging blindly.
 
 ## Author
-Afri Mohammed | Frontend Developer
+Afri | Frontend Developer
 [GitHub](https://github.com/Aedenfri-Fusiondev)
