@@ -18,18 +18,18 @@ async function fetchApi() {
   output.innerHTML = `<p style="color: blue; font-weight: bold;">Loading user profiles...</p>`;
 
   try{
-    const response = await fetch(`https://jsonplaceholder.typicode.com/users?name=${userInput}`);
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
 
     if(!response.ok){
       throw new Error(`Status: ${response.status}`)
     }
 
     const data = await response.json()
-    
+    const filtered = data.filter(user => user.name.toLowerCase().includes(userInput.toLowerCase()))
 
-  if(data.length > 0){
+  if(filtered.length > 0){
       
-        output.innerHTML = data.map(user => `
+        output.innerHTML = filtered.map(user => `
         <p><strong>Name: </strong> ${user.name}</p>
         <p><strong>Email: </strong>${user.email}</p>
         <p><strong>UserName: </strong>${user.username}</p>`
@@ -42,7 +42,7 @@ async function fetchApi() {
 }
 
   catch(error){
-    output.innerHTML = `<p> Somethhing went wrong , ${error} </p>`
+    output.innerHTML = `<p> Something went wrong , ${error} </p>`
   }
 
   users.value =""
